@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore o universo</title>
+    <link rel="shortcut icon" href="img/et-gif.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css.map">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- Mover os ícones para a direita -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/samuel_gardenn/"><i
+                                class="bi bi-instagram"></i>Instagram</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/samuel-jardim-alves-13864726b/"><i
+                                class="bi bi-linkedin"></i>LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/Samuelgardenn"><i
+                                class="bi bi-github"></i>GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="top-title"> <!-- Adicione o título chamativo acima do sistema solar -->
+        <h1>Explore o vasto universo!</h1>
+    </div>
+
+    <div class="section-container">
+        <div class="sol"></div>
+        <div class="planet mercury"></div>
+        <div class="planet venus"></div>
+        <div class="planet earth"></div>
+        <div class="planet mars"></div>
+        <div class="planet jupiter"></div>
+        <div class="planet saturn"></div>
+    </div>
+
+    <div class="container__titulo">
+        <p>Aonde vamos ?</p>
+    </div>
+
+    <div class="container">
+        <div class="card-container">
+            <div class="card card-mercury" onclick="openPlanetInfo('mercury')">
+                <div class="planet-name">Mercúrio</div>
+            </div>
+            <div class="card card-venus" onclick="openPlanetInfo('venus')">
+                <div class="planet-name">Venus</div>
+            </div>
+            <div class="card card-earth" onclick="openPlanetInfo('earth')">
+                <div class="planet-name">Terra</div>
+            </div>
+            <div class="card card-mars" onclick="openPlanetInfo('mars')">
+                <div class="planet-name">Marte</div>
+            </div>
+            <div class="card card-jupiter" onclick="openPlanetInfo('jupiter')">
+                <div class="planet-name">Júpiter</div>
+            </div>
+            <div class="card card-saturn" onclick="openPlanetInfo('saturn')">
+                <div class="planet-name">Saturno</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modais para cada planeta -->
+    <div class="modal fade" id="mercuryModal" tabindex="-1" aria-labelledby="mercuryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content  futurist-content">
+                <div class="modal-header  futurist-header">
+                    <h5 class="modal-title" id="mercuryModalLabel">Mercúrio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Mercúrio é o menor planeta do nosso sistema solar.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal para Venus -->
+    <div class="modal fade" id="venusModal" tabindex="-1" aria-labelledby="venusModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content  futurist-content">
+                <div class="modal-header  futurist-header">
+                    <h5 class="modal-title" id="venusModalLabel">Vênus</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Vênus é frequentemente chamada de 'Estrela da Manhã' ou 'Estrela da Tarde'.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para terra -->
+    <div class="modal fade" id="earthModal" tabindex="-1" aria-labelledby="earthModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content  futurist-content">
+                <div class="modal-header  futurist-header">
+                    <h5 class="modal-title" id="earthModalLabel">Terra</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    A Terra é o único planeta conhecido que suporta vida.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Marte -->
+    <div class="modal fade" id="marsModal" tabindex="-1" aria-labelledby="marsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content  futurist-content">
+                <div class="modal-header  futurist-header">
+                    <h5 class="modal-title" id="marsModalLabel">Marte</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Marte às vezes é chamado de 'Planeta Vermelho' devido à sua aparência avermelhada.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Jupiter -->
+    <div class="modal fade" id="jupiterModal" tabindex="-1" aria-labelledby="jupiterModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content  futurist-content">
+                <div class="modal-header  futurist-header">
+                    <h5 class="modal-title" id="jupiterModalLabel">Júpiter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Júpiter é o maior planeta do nosso sistema solar.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Saturno -->
+    <div class="modal fade" id="saturnModal" tabindex="-1" aria-labelledby="saturnModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content  futurist-content">
+                <div class="modal-header  futurist-header">
+                    <h5 class="modal-title" id="saturnModalLabel">Saturno</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Saturno é famoso por seu belo sistema de anéis.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button class="quiz-button " onclick="showSpaceQuiz()">Faça seu teste espacial</button>
+    </div>
+
+    <!-- Espaço para o Quiz (inicialmente oculto) -->
+    <div class="quiz" id="spaceQuiz" style="display: none;">
+        <p>Question 1: What is the largest planet in our solar system?</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="question1" id="q1-option1" value="option1">
+            <label class="form-check-label" for="q1-option1">a) Mercury</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="question1" id="q1-option2" value="option2">
+            <label class="form-check-label" for="q1-option2">b) Venus</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="question1" id="q1-option3" value="option3">
+            <label class="form-check-label" for="q1-option3">c) Earth</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="question1" id="q1-option4" value="option4">
+            <label class="form-check-label" for="q1-option4">d) Jupiter</label>
+        </div>
+        <button class="quiz-button" onclick="checkQuizAnswers()">Submit</button>
+        <div id="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz" id="spaceQuiz" id="animation-success" class="fade-in-animation" style="display: none;">
+        <p>Question 1: What is the largest planet in our solar system?</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="question1" id="q1-option1" value="option1">
+            <label class="form-check-label" for="q1-option1">a) Mercury</label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="question1" id="q1-option2" value="option2">
+            <label class="form-check-label" for="q1-option2">b) Venus</label>
+        </div>
+
+        <div class="form-check">
+            < <input class="form-check-input" type="radio" name="question1" id="q1-option3" value="option3">
+                < <label class="form-check-label" for="q1-option3">c) Earth</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="question1" id="q1-option4" value="option4">
+            <label class="form-check-label" for="q1-option4">d) Jupiter</label>
+        </div>
+
+
+        <button class="quiz-button" id="animation-success" class="fade-in-animation" style="display: none;"
+            onclick="checkQuizAnswers()">Submit</button>
+        <div id="quiz-feedback"></div>
+    </div>
+
+
+    <div class="footer">
+        &copy; 2023 Criado por Samuel Alves
+    </div>
+
+    <div id="etGif" class="wiggle-on-hover"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

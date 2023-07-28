@@ -1,0 +1,376 @@
+:root {
+    --primary-color: #3a3a6d;
+    /* Azul escuro */
+    --secondary-color: #cb0fff;
+    /* Roxo */
+    --accent-color: #f0e68c;
+    /* Amarelo */
+    --background-color: #000000;
+    /* Fundo escuro */
+    --text-color: #ffffff;
+    /* Texto branco */
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    background-image: url(img/space.jpg);
+    background-repeat: no-repeat;
+    font-family: "Arial", sans-serif;
+}
+
+body.correct-answer {
+    cursor: url('https://example.com/alien.png'), auto;
+}
+
+
+.card-container {
+    margin-top: 3em;
+}
+
+.navbar {
+    padding: 10px;
+    justify-content: center;
+    background-color: #333;
+}
+
+.navbar-brand {
+    color: var(--text-color);
+    font-size: 24px;
+}
+
+.top-title {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 100px white;
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 30px white;
+}
+
+.mercury {
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-color);
+}
+
+.venus {
+    width: 10px;
+    height: 10px;
+    background-color: var(--secondary-color);
+}
+
+.earth {
+    width: 12px;
+    height: 12px;
+    background-color: #4d79ff;
+}
+
+.mars {
+    width: 10px;
+    height: 10px;
+    background-color: #e65c00;
+}
+
+.jupiter {
+    width: 30px;
+    height: 30px;
+    background-color: #ffa31a;
+}
+
+.saturn {
+    width: 26px;
+    height: 26px;
+    background-color: #ffcc66;
+}
+
+.footer {
+    margin-top: 5em;
+    font-size: 16px;
+    color: var(--text-color);
+    font-family: "Arial", sans-serif;
+}
+
+.section-container {
+    margin-top: 6em 0 6em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.container__titulo {
+    text-align: center;
+    margin-top: 10em;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 12em;
+}
+
+.card {
+    width: 200px;
+    height: 150px;
+    background-color: #f8f9fa;
+    color: var(--text-color);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px var(--secondary-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px var(--secondary-color);
+    opacity: 0.8;
+}
+
+.card:active {
+    transform: translateY(10px);
+    box-shadow: 0 2px 7px rgb(0, 0, 0.2);
+
+}
+
+.card-mercury {
+    background-image: url(img/mercurio.jpg);
+}
+
+.card-earth {
+    background-image: url(img/terra.jpg);
+}
+
+.card-venus {
+    background-image: url(img/venus.jpg);
+}
+
+.card-mars {
+    background-image: url(img/marte.jpg);
+}
+
+.card-jupiter {
+    background-image: url(img/Jupiter.jpg);
+}
+
+.card-saturn {
+    background-image: url(img/saturno.jpg);
+}
+
+.card-earth,
+.card-jupiter,
+.card-mars,
+.card-mercury,
+.card-saturn,
+.card-venus {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.planet-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.quiz-button:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border-color: var(--accent-color);
+}
+
+.card-container {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.show-card-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-item .bi {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+.nav-item .bi:hover {
+    color: var(--accent-color);
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    justify-content: center;
+}
+
+.navbar-brand {
+    margin-right: 0.5rem;
+}
+
+.futurist-modal .modal-content {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.futurist-modal .modal-header {
+    background-color: var(--primary-color);
+    border-bottom: none;
+}
+
+.futurist-modal .modal-title {
+    color: var(--accent-color);
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.futurist-modal .modal-body {
+    font-size: 16px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.futurist-modal .btn-close {
+    color: var(--text-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-animation {
+    animation: fadeIn 1s;
+    display: none;
+}
+
+.quiz {
+    color: #f8f9fa;
+    margin-top: 5em;
+    padding: 20px;
+    background-image: url(img/space.jpg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quiz p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.quiz .form-check {
+    margin-bottom: 10px;
+}
+
+.quiz .form-check-label {
+    font-size: 16px;
+}
+
+.quiz-button {
+    margin-top: 5em;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.quiz-button:hover {
+    background-color: var(--background-color);
+    color: var(--accent-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px var(--secondary-color);
+
+}
+
+.quiz-button:active {
+    transform: translateY(10px);
+    box-shadow: 0 2px 7px rgb(0, 0, 0.2);
+}
+
+@keyframes wiggleAnimation {
+        0% { transform: rotateZ(0); }
+        25% { transform: rotateZ(-10deg); }
+        50% { transform: rotateZ(10deg); }
+        75% { transform: rotateZ(-10deg); }
+        100% { transform: rotateZ(0); }
+    }
+
+    .wiggle-on-hover {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background-image: url("img/et-gif.png");
+        background-size: cover;
+        z-index: 9999;
+        transition: transform 0.2s;
+    }
+
+    .wiggle-on-hover:hover {
+        animation: wiggleAnimation 1s infinite;
+    }
